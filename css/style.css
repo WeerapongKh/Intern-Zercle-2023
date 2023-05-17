@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+#page {
+  height: 100vh;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: #c70101;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4);
+  z-index: -1;
+  padding: 10px;
+}
+#navbar > ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 3px solid transparent;
+
+}
+#navbar > p > a {
+  padding: 10px;
+  text-decoration: none;
+}
+#navbar > ul > li {
+  padding: 14px;
+}
+
+span {
+  color: #c70101;
+}
+#navbar > ul > li >a,
+#navbar > p > a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  
+}
+#navbar > ul > li > a:hover,#navbar>p>a:hover  {
+  border-bottom: 5px solid white;
+}
+
+#page {
+  margin-top: 10px;
+  box-sizing: border-box;
+  display: grid;
+  width: 100%;
+  grid-template-areas: "main-content right-content";
+  grid-template-columns: 40% 60%;
+}
+#page > #main-content {
+  grid-area: main-content;
+}
+#main-content {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 10px;
+  margin-left: 24px;
+  padding-left: 10px;
+}
+.title-header {
+  width: 100%;
+  height: 20%;
+}
+.title-content {
+  font-size: 2rem;
+}
+#qoute {
+  width: 100%;
+  height: 15%;
+}
+#right-content {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin-top: 10px;
+}
+#old-trafford {
+  width: 70%;
+}
+#oldtrafford-img {
+  text-decoration: none;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 40%;
+  width: 70%;
+  background-image: url("https://i2-prod.mirror.co.uk/incoming/article21231105.ece/ALTERNATES/s615b/0_Manchester-United-v-Tottenham-Hotspur-Premier-League.jpg");
+  background-size: 100% 100%;
+  padding-right: 10px;
+  border-radius: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#oldtrafford-img:hover {
+  transform: perspective(500px) translate3d(0, 0, 20px);
+  cursor: pointer;
+}
+.description-img {
+  margin-top: 24px;
+  font-size: 1.5rem;
+  color: white;
+}
+.view {
+  margin-bottom: 24px;
+  height: 10%;
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.view > p {
+  color: white;
+  opacity: 1;
+}
+#top-player {
+  margin-top: 10px;
+  height: 8%;
+  width: 70%;
+  background-color: #c70101;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#top-player > h1 {
+  text-align: center;
+  color: white;
+}
+#player {
+  width: 70%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card-player-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 24px;
+  margin-top: 24px;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://assets.manutd.com/AssetPicker/images/0/0/16/247/1111858/Player_Profile_Thumbnail_Mens_2223_Kit_DDG1658217243086_large.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.card-player-1,
+.card-player-2 {
+  transition: transform 0.3s ease-in-out;
+}
+.card-player-1:hover,
+.card-player-2:hover {
+  transform: perspective(500px) translate3d(0, 0, 50px);
+  cursor: pointer;
+}
+.card-player-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 24px;
+  margin-top: 24px;
+  height: 100%;
+  width: 100%;
+  background-image: url("https://assets.manutd.com/AssetPicker/images/0/0/16/247/1111856/Player_Profile_Thumbnail_Mens_2223_Kit_bruno1658216901789_large.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type="search"] {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  padding: 0px 20px 0px 40px;
+  border-radius: 40px;
+  outline: none;
+  border: solid gray 2px;
+  background: url("/image/mun-img/eye.png") 7px center no-repeat;
+}

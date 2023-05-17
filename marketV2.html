@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/marketV2.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+
+<body>
+  <nav class="main-bar">
+    <div class="left-bar">
+      <div class="logo">
+        <a href="#"><img height="36px" src="image/market-img/logo.png" alt=""> </a>
+      </div>
+      <form class="form">
+        <button>
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+            aria-labelledby="search">
+            <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+              stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <input class="input" placeholder="Type your text" required="" type="text">
+        <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div class="right-bar">
+      <ul>
+        <li><a href="#"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+              height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M696 472c0 4.4-3.6 8-8 8h-56c-4.4 0-8-3.6-8-8v-88H400v88c0 4.4-3.6 8-8 8h-56c-4.4 0-8-3.6-8-8v-88h-96v456h560V384h-96v88z">
+              </path>
+              <path
+                d="M832 312H696v-16c0-101.6-82.4-184-184-184s-184 82.4-184 184v16H192c-17.7 0-32 14.3-32 32v536c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V344c0-17.7-14.3-32-32-32zm-432-16c0-61.9 50.1-112 112-112s112 50.1 112 112v16H400v-16zm392 544H232V384h96v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h224v88c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-88h96v456z">
+              </path>
+            </svg></a></li>
+        <li>
+          <a href="#">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M923 283.6a260.04 260.04 0 0 0-56.9-82.8 264.4 264.4 0 0 0-84-55.5A265.34 265.34 0 0 0 679.7 125c-49.3 0-97.4 13.5-139.2 39-10 6.1-19.5 12.8-28.5 20.1-9-7.3-18.5-14-28.5-20.1-41.8-25.5-89.9-39-139.2-39-35.5 0-69.9 6.8-102.4 20.3-31.4 13-59.7 31.7-84 55.5a258.44 258.44 0 0 0-56.9 82.8c-13.9 32.3-21 66.6-21 101.9 0 33.3 6.8 68 20.3 103.3 11.3 29.5 27.5 60.1 48.2 91 32.8 48.9 77.9 99.9 133.9 151.6 92.8 85.7 184.7 144.9 188.6 147.3l23.7 15.2c10.5 6.7 24 6.7 34.5 0l23.7-15.2c3.9-2.5 95.7-61.6 188.6-147.3 56-51.7 101.1-102.7 133.9-151.6 20.7-30.9 37-61.5 48.2-91 13.5-35.3 20.3-70 20.3-103.3.1-35.3-7-69.6-20.9-101.9z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+              <path
+                d="M7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2a8.445 8.445 0 013.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43a8.495 8.495 0 013.54 6.42zM18 11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2v-5zm-6 11c.14 0 .27-.01.4-.04.65-.14 1.18-.58 1.44-1.18.1-.24.15-.5.15-.78h-4c.01 1.1.9 2 2.01 2z">
+              </path>
+            </svg>
+          </a>
+        </li>
+        <li class="line-emty">
+          <a href="" class>
+            <svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 15 15" height="1em" width="1em"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.8 1L2.74967 0.99997C2.52122 0.999752 2.32429 0.999564 2.14983 1.04145C1.60136 1.17312 1.17312 1.60136 1.04145 2.14983C0.999564 2.32429 0.999752 2.52122 0.99997 2.74967L1 2.8V5.2L0.99997 5.25033C0.999752 5.47878 0.999564 5.67572 1.04145 5.85017C1.17312 6.39864 1.60136 6.82688 2.14983 6.95856C2.32429 7.00044 2.52122 7.00025 2.74967 7.00003L2.8 7H5.2L5.25033 7.00003C5.47878 7.00025 5.67572 7.00044 5.85017 6.95856C6.39864 6.82688 6.82688 6.39864 6.95856 5.85017C7.00044 5.67572 7.00025 5.47878 7.00003 5.25033L7 5.2V2.8L7.00003 2.74967C7.00025 2.52122 7.00044 2.32429 6.95856 2.14983C6.82688 1.60136 6.39864 1.17312 5.85017 1.04145C5.67572 0.999564 5.47878 0.999752 5.25033 0.99997L5.2 1H2.8ZM2.38328 2.01382C2.42632 2.00348 2.49222 2 2.8 2H5.2C5.50779 2 5.57369 2.00348 5.61672 2.01382C5.79955 2.05771 5.94229 2.20045 5.98619 2.38328C5.99652 2.42632 6 2.49222 6 2.8V5.2C6 5.50779 5.99652 5.57369 5.98619 5.61672C5.94229 5.79955 5.79955 5.94229 5.61672 5.98619C5.57369 5.99652 5.50779 6 5.2 6H2.8C2.49222 6 2.42632 5.99652 2.38328 5.98619C2.20045 5.94229 2.05771 5.79955 2.01382 5.61672C2.00348 5.57369 2 5.50779 2 5.2V2.8C2 2.49222 2.00348 2.42632 2.01382 2.38328C2.05771 2.20045 2.20045 2.05771 2.38328 2.01382ZM9.8 1L9.74967 0.99997C9.52122 0.999752 9.32429 0.999564 9.14983 1.04145C8.60136 1.17312 8.17312 1.60136 8.04145 2.14983C7.99956 2.32429 7.99975 2.52122 7.99997 2.74967L8 2.8V5.2L7.99997 5.25033C7.99975 5.47878 7.99956 5.67572 8.04145 5.85017C8.17312 6.39864 8.60136 6.82688 9.14983 6.95856C9.32429 7.00044 9.52122 7.00025 9.74967 7.00003L9.8 7H12.2L12.2503 7.00003C12.4788 7.00025 12.6757 7.00044 12.8502 6.95856C13.3986 6.82688 13.8269 6.39864 13.9586 5.85017C14.0004 5.67572 14.0003 5.47878 14 5.25033L14 5.2V2.8L14 2.74967C14.0003 2.52122 14.0004 2.32429 13.9586 2.14983C13.8269 1.60136 13.3986 1.17312 12.8502 1.04145C12.6757 0.999564 12.4788 0.999752 12.2503 0.99997L12.2 1H9.8ZM9.38328 2.01382C9.42632 2.00348 9.49222 2 9.8 2H12.2C12.5078 2 12.5737 2.00348 12.6167 2.01382C12.7995 2.05771 12.9423 2.20045 12.9862 2.38328C12.9965 2.42632 13 2.49222 13 2.8V5.2C13 5.50779 12.9965 5.57369 12.9862 5.61672C12.9423 5.79955 12.7995 5.94229 12.6167 5.98619C12.5737 5.99652 12.5078 6 12.2 6H9.8C9.49222 6 9.42632 5.99652 9.38328 5.98619C9.20045 5.94229 9.05771 5.79955 9.01382 5.61672C9.00348 5.57369 9 5.50779 9 5.2V2.8C9 2.49222 9.00348 2.42632 9.01382 2.38328C9.05771 2.20045 9.20045 2.05771 9.38328 2.01382ZM2.74967 7.99997L2.8 8H5.2L5.25033 7.99997C5.47878 7.99975 5.67572 7.99956 5.85017 8.04145C6.39864 8.17312 6.82688 8.60136 6.95856 9.14983C7.00044 9.32429 7.00025 9.52122 7.00003 9.74967L7 9.8V12.2L7.00003 12.2503C7.00025 12.4788 7.00044 12.6757 6.95856 12.8502C6.82688 13.3986 6.39864 13.8269 5.85017 13.9586C5.67572 14.0004 5.47878 14.0003 5.25033 14L5.2 14H2.8L2.74967 14C2.52122 14.0003 2.32429 14.0004 2.14983 13.9586C1.60136 13.8269 1.17312 13.3986 1.04145 12.8502C0.999564 12.6757 0.999752 12.4788 0.99997 12.2503L1 12.2V9.8L0.99997 9.74967C0.999752 9.52122 0.999564 9.32429 1.04145 9.14983C1.17312 8.60136 1.60136 8.17312 2.14983 8.04145C2.32429 7.99956 2.52122 7.99975 2.74967 7.99997ZM2.8 9C2.49222 9 2.42632 9.00348 2.38328 9.01382C2.20045 9.05771 2.05771 9.20045 2.01382 9.38328C2.00348 9.42632 2 9.49222 2 9.8V12.2C2 12.5078 2.00348 12.5737 2.01382 12.6167C2.05771 12.7995 2.20045 12.9423 2.38328 12.9862C2.42632 12.9965 2.49222 13 2.8 13H5.2C5.50779 13 5.57369 12.9965 5.61672 12.9862C5.79955 12.9423 5.94229 12.7995 5.98619 12.6167C5.99652 12.5737 6 12.5078 6 12.2V9.8C6 9.49222 5.99652 9.42632 5.98619 9.38328C5.94229 9.20045 5.79955 9.05771 5.61672 9.01382C5.57369 9.00348 5.50779 9 5.2 9H2.8ZM9.8 8L9.74967 7.99997C9.52122 7.99975 9.32429 7.99956 9.14983 8.04145C8.60136 8.17312 8.17312 8.60136 8.04145 9.14983C7.99956 9.32429 7.99975 9.52122 7.99997 9.74967L8 9.8V12.2L7.99997 12.2503C7.99975 12.4788 7.99956 12.6757 8.04145 12.8502C8.17312 13.3986 8.60136 13.8269 9.14983 13.9586C9.32429 14.0004 9.52122 14.0003 9.74967 14L9.8 14H12.2L12.2503 14C12.4788 14.0003 12.6757 14.0004 12.8502 13.9586C13.3986 13.8269 13.8269 13.3986 13.9586 12.8502C14.0004 12.6757 14.0003 12.4788 14 12.2503L14 12.2V9.8L14 9.74967C14.0003 9.52122 14.0004 9.32429 13.9586 9.14983C13.8269 8.60136 13.3986 8.17312 12.8502 8.04145C12.6757 7.99956 12.4788 7.99975 12.2503 7.99997L12.2 8H9.8ZM9.38328 9.01382C9.42632 9.00348 9.49222 9 9.8 9H12.2C12.5078 9 12.5737 9.00348 12.6167 9.01382C12.7995 9.05771 12.9423 9.20045 12.9862 9.38328C12.9965 9.42632 13 9.49222 13 9.8V12.2C13 12.5078 12.9965 12.5737 12.9862 12.6167C12.9423 12.7995 12.7995 12.9423 12.6167 12.9862C12.5737 12.9965 12.5078 13 12.2 13H9.8C9.49222 13 9.42632 12.9965 9.38328 12.9862C9.20045 12.9423 9.05771 12.7995 9.01382 12.6167C9.00348 12.5737 9 12.5078 9 12.2V9.8C9 9.49222 9.00348 9.42632 9.01382 9.38328C9.05771 9.20045 9.20045 9.05771 9.38328 9.01382Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </li>
+        <li>
+
+          <a href="">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48"
+              enable-background="new 0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <polygon fill="#FF9800" points="24,37 19,31 19,25 29,25 29,31"></polygon>
+              <g fill="#FFA726">
+                <circle cx="33" cy="19" r="2"></circle>
+                <circle cx="15" cy="19" r="2"></circle>
+              </g>
+              <path fill="#FFB74D"
+                d="M33,13c0-7.6-18-5-18,0c0,1.1,0,5.9,0,7c0,5,4,9,9,9s9-4,9-9C33,18.9,33,14.1,33,13z"></path>
+              <path fill="#FF5722"
+                d="M24,4c-6.1,0-10,4.9-10,11c0,0.8,0,2.3,0,2.3l2,1.7v-5l12-4l4,4v5l2-1.7c0,0,0-1.5,0-2.3c0-4-1-8-6-9l-1-2 H24z">
+              </path>
+              <g fill="#784719">
+                <circle cx="28" cy="19" r="1"></circle>
+                <circle cx="20" cy="19" r="1"></circle>
+              </g>
+              <path fill="#CFD8DC" d="M29,31L29,31l-5,1l-5-1c0,0-11,2-11,13h32C40,33,29,31,29,31z"></path>
+              <polygon fill="#3F51B5" points="23,35 22,44 26,44 25,35 26,34 24,32 22,34"></polygon>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="item-bar">
+
+    <ul>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/backpack.png" alt="">
+          <p>Ransel</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img clas="" src="image/market-img/shoes.png" alt="">
+          <p>Shoes</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/heels.png" alt="">
+          <p>High heels</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/socks.png" alt="">
+          <p>Soks</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/fashion.png" alt="">
+          <p>Pants</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/tshirt.png" alt="">
+          <p>T-Shirt</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/dress.png" alt="">
+          <p>Dress</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/underwear.png" alt="">
+          <p>Underwear</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/shampoo.png" alt="">
+          <p>Hair care</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/sunscreen.png" alt="">
+          <p>Skin care</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/treasure.png" alt="">
+          <p>Jewellvery</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/book.png" alt="">
+          <p>Books</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/vinyl.png" alt="">
+          <p>Vinyl</p>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="#">
+          <img src="image/market-img/desktop.png" alt="">
+          <p>Computer</p>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+  <div class="main-page">
+    <aside class="sidebar">
+      <ul class=>
+        <li>
+          <a href="#" class="feat-btn">Category
+            <span class="fas fa-caret-down first"></span>
+
+          </a>
+          <ul class="feat-show">
+            <li><label for=""><input type="checkbox" name=""> Cleansers</label></li>
+            <li><label for=""><input type="checkbox" name=""> Toner</label></li>
+            <li><label for=""><input type="checkbox" name=""> Serum</label></li>
+            <li><label for=""><input type="checkbox" name=""> Moisturizer</label></li>
+            <li><label for=""><input type="checkbox" name=""> Face mask</label></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="serv-btn">Price <span class="fas fa-caret-down second"></span></a>
+
+          <ul class="serv-show">
+            <li><label for=""><input type="checkbox" /> High to low</label></li>
+            <li><label for=""><input type="checkbox" /> Low to high</label></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="locat-btn">Location <span class="fas fa-caret-down thrid"></span></a>
+
+          <ul class="locat-show">
+            <li><label for=""><input type="checkbox"> Nearest</label></li>
+            <li><label for=""><input type="checkbox"> Farthest</label></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="rate-btn">Rating <span class="fas fa-caret-down four"></span></a>
+
+          <ul class="rate-show">
+            <li><label for=""><input type="checkbox" /> Highest</label></li>
+            <li><label for=""><input type="checkbox" /> Lowest</label></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="ship-btn">Shipping<span class="fas fa-caret-down five"></span></a>
+
+          <ul class="ship-show">
+            <li><label for=""><input type="checkbox"> Regular</label> </li>
+            <li><label for=""><input type="checkbox"> Next day</label></li>
+            <li><label for=""><input type="checkbox"> Instant</label></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+    <div class="main-content">
+      <p class="market-title"><span style="color:#35363a"> Home > Cleanizer ></span>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M882 272.1V144c0-17.7-14.3-32-32-32H174c-17.7 0-32 14.3-32 32v128.1c-16.7 1-30 14.9-30 31.9v131.7a177 177 0 0 0 14.4 70.4c4.3 10.2 9.6 19.8 15.6 28.9v345c0 17.6 14.3 32 32 32h676c17.7 0 32-14.3 32-32V535a175 175 0 0 0 15.6-28.9c9.5-22.3 14.4-46 14.4-70.4V304c0-17-13.3-30.9-30-31.9zM214 184h596v88H214v-88zm362 656.1H448V736h128v104.1zm234 0H640V704c0-17.7-14.3-32-32-32H416c-17.7 0-32 14.3-32 32v136.1H214V597.9c2.9 1.4 5.9 2.8 9 4 22.3 9.4 46 14.1 70.4 14.1s48-4.7 70.4-14.1c13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0 0 38.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0 0 38.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 3-1.3 6-2.6 9-4v242.2zm30-404.4c0 59.8-49 108.3-109.3 108.3-40.8 0-76.4-22.1-95.2-54.9-2.9-5-8.1-8.1-13.9-8.1h-.6c-5.7 0-11 3.1-13.9 8.1A109.24 109.24 0 0 1 512 544c-40.7 0-76.2-22-95-54.7-3-5.1-8.4-8.3-14.3-8.3s-11.4 3.2-14.3 8.3a109.63 109.63 0 0 1-95.1 54.7C233 544 184 495.5 184 435.7v-91.2c0-.3.2-.5.5-.5h655c.3 0 .5.2.5.5v91.2z">
+          </path>
+        </svg>
+        Marwarshop
+      </p>
+      <main class="market">
+        <div class="market-header">
+          <div id="card-header">
+            <div class="card-img-header"></div>
+            <div class="card-info-header">
+              <p class="text-title title-card-header"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M882 272.1V144c0-17.7-14.3-32-32-32H174c-17.7 0-32 14.3-32 32v128.1c-16.7 1-30 14.9-30 31.9v131.7a177 177 0 0 0 14.4 70.4c4.3 10.2 9.6 19.8 15.6 28.9v345c0 17.6 14.3 32 32 32h676c17.7 0 32-14.3 32-32V535a175 175 0 0 0 15.6-28.9c9.5-22.3 14.4-46 14.4-70.4V304c0-17-13.3-30.9-30-31.9zM214 184h596v88H214v-88zm362 656.1H448V736h128v104.1zm234 0H640V704c0-17.7-14.3-32-32-32H416c-17.7 0-32 14.3-32 32v136.1H214V597.9c2.9 1.4 5.9 2.8 9 4 22.3 9.4 46 14.1 70.4 14.1s48-4.7 70.4-14.1c13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0 0 38.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 13.8-5.8 26.8-13.2 38.7-22.1.2-.1.4-.1.6 0a180.4 180.4 0 0 0 38.7 22.1c22.3 9.4 46 14.1 70.4 14.1 24.4 0 48-4.7 70.4-14.1 3-1.3 6-2.6 9-4v242.2zm30-404.4c0 59.8-49 108.3-109.3 108.3-40.8 0-76.4-22.1-95.2-54.9-2.9-5-8.1-8.1-13.9-8.1h-.6c-5.7 0-11 3.1-13.9 8.1A109.24 109.24 0 0 1 512 544c-40.7 0-76.2-22-95-54.7-3-5.1-8.4-8.3-14.3-8.3s-11.4 3.2-14.3 8.3a109.63 109.63 0 0 1-95.1 54.7C233 544 184 495.5 184 435.7v-91.2c0-.3.2-.5.5-.5h655c.3 0 .5.2.5.5v91.2z">
+                  </path>
+                </svg> Mawar shop official</p>
+              <ul style="color:#0c9a56">
+                <li>online</li>
+              </ul>
+            </div>
+            <div class="card-footer-header">
+              <div class="text-follow">
+                <p class="title-footer-header">
+                  Follow
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" aria-hidden="true"
+                    height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+                      clip-rule="evenodd"></path>
+                  </svg>
+                </p>
+              </div>
+              <div class="card-button-header">
+                <p class="title-footer-header">
+                  Chat
+                  <span class="space-icon-right">
+
+                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                      width="1em" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                      </path>
+                    </svg>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div id="chart">
+            <div class="left-chart">
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M528.12 301.319l47.273-208C578.806 78.301 567.391 64 551.99 64H159.208l-9.166-44.81C147.758 8.021 137.93 0 126.529 0H24C10.745 0 0 10.745 0 24v16c0 13.255 10.745 24 24 24h69.883l70.248 343.435C147.325 417.1 136 435.222 136 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-15.674-6.447-29.835-16.824-40h209.647C430.447 426.165 424 440.326 424 456c0 30.928 25.072 56 56 56s56-25.072 56-56c0-22.172-12.888-41.332-31.579-50.405l5.517-24.276c3.413-15.018-8.002-29.319-23.403-29.319H218.117l-6.545-32h293.145c11.206 0 20.92-7.754 23.403-18.681z">
+                    </path>
+                  </svg> </span>
+                Products: <span class="chart-value">600 </span>
+              </p>
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M10.27 12h3.46a1.5 1.5 0 001.48-1.75l-.3-1.79a2.951 2.951 0 00-5.82.01l-.3 1.79c-.15.91.55 1.74 1.48 1.74zM1.66 11.11c-.13.26-.18.57-.1.88.16.69.76 1.03 1.53 1h1.95c.83 0 1.51-.58 1.51-1.29 0-.14-.03-.27-.07-.4-.01-.03-.01-.05.01-.08.09-.16.14-.34.14-.53 0-.31-.14-.6-.36-.82-.03-.03-.03-.06-.02-.1.07-.2.07-.43.01-.65a1.12 1.12 0 00-.99-.74.09.09 0 01-.07-.03C5.03 8.14 4.72 8 4.37 8c-.3 0-.57.1-.75.26-.03.03-.06.03-.09.02a1.24 1.24 0 00-1.7 1.03c0 .02-.01.04-.03.06-.29.26-.46.65-.41 1.05.03.22.12.43.25.6.03.02.03.06.02.09zM16.24 13.65c-1.17-.52-2.61-.9-4.24-.9-1.63 0-3.07.39-4.24.9A2.988 2.988 0 006 16.39V18h12v-1.61c0-1.18-.68-2.26-1.76-2.74zM1.22 14.58A2.01 2.01 0 000 16.43V18h4.5v-1.61c0-.83.23-1.61.63-2.29-.37-.06-.74-.1-1.13-.1-.99 0-1.93.21-2.78.58zM22.78 14.58A6.95 6.95 0 0020 14c-.39 0-.76.04-1.13.1.4.68.63 1.46.63 2.29V18H24v-1.57c0-.81-.48-1.53-1.22-1.85zM22 11v-.5c0-1.1-.9-2-2-2h-2c-.42 0-.65.48-.39.81l.7.63c-.19.31-.31.67-.31 1.06 0 1.1.9 2 2 2s2-.9 2-2z">
+                    </path>
+                  </svg>
+
+                </span>
+                Followers: <span class="chart-value">40.5k </span>
+              </p>
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <path fill="none" d="M0 0h24v24H0z"></path>
+                      <path
+                        d="M13 14.062V22H4a8 8 0 0 1 9-7.938zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm5.793 6.914l3.535-3.535 1.415 1.414-4.95 4.95-3.536-3.536 1.415-1.414 2.12 2.121z">
+                      </path>
+                    </g>
+                  </svg>
+                </span>
+                Following: <span class="chart-value">1.5k </span>
+              </p>
+            </div>
+            <div class="right-chart">
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M908.1 353.1l-253.9-36.9L540.7 86.1c-3.1-6.3-8.2-11.4-14.5-14.5-15.8-7.8-35-1.3-42.9 14.5L369.8 316.2l-253.9 36.9c-7 1-13.4 4.3-18.3 9.3a32.05 32.05 0 0 0 .6 45.3l183.7 179.1-43.4 252.9a31.95 31.95 0 0 0 46.4 33.7L512 754l227.1 119.4c6.2 3.3 13.4 4.4 20.3 3.2 17.4-3 29.1-19.5 26.1-36.9l-43.4-252.9 183.7-179.1c5-4.9 8.3-11.3 9.3-18.3 2.7-17.5-9.5-33.7-27-36.3z">
+                    </path>
+                  </svg>
+                </span>
+                Rating: <span class="chart-value">4.9 </span> <span class="chart-descript">(30.2k reviews)</span>
+              </p>
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                    width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                    </path>
+                  </svg>
+                </span>
+                Chat performance: <span class="chart-value">93% <span class="chart-descript">(Within
+                    hours)</span></span>
+              </p>
+              <p>
+                <span class="space-icon">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                    viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M9 14c1.381 0 2.631-.56 3.536-1.465.904-.904 1.464-2.154 1.464-3.535s-.56-2.631-1.464-3.535c-.905-.905-2.155-1.465-3.536-1.465s-2.631.56-3.536 1.465c-.904.904-1.464 2.154-1.464 3.535s.56 2.631 1.464 3.535c.905.905 2.155 1.465 3.536 1.465zM9 21c3.518 0 6-1 6-2 0-2-2.354-4-6-4-3.75 0-6 2-6 4 0 1 2.25 2 6 2zM21 12h-2v-2c0-.553-.447-1-1-1s-1 .447-1 1v2h-2c-.553 0-1 .447-1 1s.447 1 1 1h2v2c0 .553.447 1 1 1s1-.447 1-1v-2h2c.553 0 1-.447 1-1s-.447-1-1-1z">
+                    </path>
+                  </svg> </span>
+                Joined: <span class="chart-value">4 years ago </span>
+              </p>
+            </div>
+          </div>
+          <div id="best">
+            <div class="best-item">
+              <p class="best-title">Awards for</p>
+              <p class="best-title">top shop</p>
+              <img class="icon-best" src="image/market-img/trophy.png" alt="">
+            </div>
+            <div class="best-item">
+              <p class="best-title">Best seller</p>
+              <p class="best-title">of the year</p>
+              <img class="icon-best" src="image/market-img/top-rated.png" alt="">
+            </div>
+          </div>
+          <div id="contract">
+            <div class="contract-title">
+              <span class="space-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd"
+                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z">
+                  </path>
+                </svg></span>
+              <p>+62 981 723 9021</p>
+            </div>
+            <div class="contract-title">
+              <span class="space-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                  </path>
+                </svg></span>
+              <p> @mwrshop</p>
+            </div>
+            <div class="contract-title">
+              <span class="space-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                  viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                  </path>
+                </svg> </span>
+              <p> mwrshop</p>
+            </div>
+            <div class="contract-title">
+              <span class="space-icon"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                  stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg></span>
+              <p> mWrshop</p>
+            </div>
+            <div class="contract-title no-line">
+              <span class="space-icon"><svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img"
+                  viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <title></title>
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z">
+                  </path>
+                </svg> </span>
+              <p> reviewmwrshop</p>
+            </div>
+          </div>
+        </div>
+        <nav class="product-bar">
+          <ul>
+            <li><a href="#" class="active">All Product</a></li>
+            <li><a href="#">Top sales</a></li>
+            <li><a href="#">Promo</a></li>
+            <li><a href="#">La Crystal</a></li>
+            <li><a href="#">Cleanizer</a></li>
+            <li><a href="#">El Tonerb</a></li>
+            <li><a href="#">Serumb</a></li>
+            <li><a href="#">More</a>
+
+            </li>
+          </ul>
+        </nav>
+        <div class="market-item-row1">
+          <div class="card">
+            <div class="card-img-1">
+            </div>
+            <div class="card-info">
+              <p class="text-title">CPU AMD AM4 RYZEN 3 4100 </p>
+              <p class="text-body">3.8 GHz / Cores 4 / Threads 8 / No Integrated Graphics </p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">2,300.- </span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                  </path>
+                  <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </g>
+              </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-2"></div>
+            <div class="card-info">
+              <p class="text-title">CPU AMD AM5 RYZEN 9 7900X3D </p>
+              <p class="text-body">4.4 GHz up to 5.6 GHz / 12 Cores / 24 Threads </p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">23,200.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                  </path>
+                  <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </g>
+              </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-3"></div>
+            <div class="card-info">
+              <p class="text-title">CPU AMD AM5 RYZEN 9 7950X3D </p>
+              <p class="text-body">4.2 GHz up to 5.7GHz / 16Cores / 24Threads / AMD Radeon Graphics </p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">27,050.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                  viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                    </path>
+                    <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-4"></div>
+            <div class="card-info">
+              <p class="text-title">CPU AMD sWRX8 RYZEN THREADRIPPER PRO 5965WX </p>
+              <p class="text-body">3.8 GHz / Cores 24 / Threads 48 </p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">93,500.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                  </path>
+                  <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </g>
+              </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="market-item-row2">
+          <div class="card">
+            <div class="card-img-5"></div>
+            <div class="card-info">
+              <p class="text-title">Headset LOGITECH (H540) Black </p>
+              <p class="text-body">USB / 20Hz-20kHz </p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">1,250.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                  viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                    </path>
+                    <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-6"></div>
+            <div class="card-info">
+              <p class="text-title">RAM DDR4(2666) 16GB KINGSTON FURY BEAST RGB</p>
+              <p class="text-body">PC4 21300 / Bus 2666</p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">1,755.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                  </path>
+                  <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </g>
+              </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-7"></div>
+            <div class="card-info">
+              <p class="text-title">2 TB SSD SATA SAMSUNG 870 QVO (MZ-77Q2T0BW) </p>
+              <p class="text-body"> Read 560 MB/s / Write 530 MB/s</p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">6,590.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                  viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <g>
+                    <path
+                      d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                    </path>
+                    <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                    <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-img-8"></div>
+            <div class="card-info">
+              <p class="text-title">4 TB SSD SATA SAMSUNG 870 QVO (MZ-77Q4T0BW)</p>
+              <p class="text-body">Read 560 MB/s / Write 530 MB/</p>
+            </div>
+            <div class="card-footer">
+              <span class="text-title">15,070.-</span>
+              <div class="card-button">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny"
+                viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                  <path
+                    d="M20.756 5.345c-.191-.219-.466-.345-.756-.345h-13.819l-.195-1.164c-.08-.482-.497-.836-.986-.836h-2.25c-.553 0-1 .447-1 1s.447 1 1 1h1.403l1.86 11.164.045.124.054.151.12.179.095.112.193.13.112.065c.116.047.238.075.367.075h11.001c.553 0 1-.447 1-1s-.447-1-1-1h-10.153l-.166-1h11.319c.498 0 .92-.366.99-.858l1-7c.041-.288-.045-.579-.234-.797zm-1.909 1.655l-.285 2h-3.562v-2h3.847zm-4.847 0v2h-3v-2h3zm0 3v2h-3v-2h3zm-4-3v2h-3l-.148.03-.338-2.03h3.486zm-2.986 3h2.986v2h-2.653l-.333-2zm7.986 2v-2h3.418l-.285 2h-3.133z">
+                  </path>
+                  <circle cx="8.5" cy="19.5" r="1.5"></circle>
+                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                </g>
+              </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    $(".btn").click(function () {
+      $(this).toggleClass("click");
+      $(".sidebar").toggleClass("show");
+    });
+    $(".feat-btn").click(function () {
+      $("aside ul .feat-show").toggleClass("show1");
+      $("aside ul .first").toggleClass("rotate");
+    });
+    $(".serv-btn").click(function () {
+      $("aside ul .serv-show").toggleClass("show2");
+      $("aside ul .second").toggleClass("rotate");
+    }); $(".locat-btn").click(function () {
+      $("aside ul .locat-show").toggleClass("show3");
+      $("aside ul .thrid").toggleClass("rotate");
+    });
+    $(".rate-btn").click(function () {
+      $("aside ul .rate-show").toggleClass("show4");
+      $("aside ul .four").toggleClass("rotate");
+    }); $(".ship-btn").click(function () {
+      $("aside ul .ship-show").toggleClass("show5");
+      $("aside ul .five").toggleClass("rotate");
+    });
+    $("aside ul li").click(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  </script>
+</body>
+
+</html>
