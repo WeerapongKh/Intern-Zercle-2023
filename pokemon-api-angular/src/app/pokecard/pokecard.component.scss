@@ -1,0 +1,25 @@
+.card-content{
+  width:50%;
+
+}
+.card-container {
+  cursor: pointer;
+  width: 250px;
+  height: 350px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  background: #fff;
+  border-radius: 10px;
+}
+.card-container:hover {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+  transform: scale(1.2);
+  background: white;
+}

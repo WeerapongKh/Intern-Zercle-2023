@@ -1,0 +1,23 @@
+<section>
+  <form>
+    <input type="text" placeholder="Filter by city" #filter>
+    <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+  </form>
+</section>
+<section class="Listing" >
+  <mat-card class="card" *ngFor="let house of housingLocationList">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{house.name}}</mat-card-title>
+    <mat-card-subtitle>{{house.city}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{house.photo}}" alt="Photo of a Shiba Inu" width="300" height="250">
+  <mat-card-actions>
+    <button mat-button><a [routerLink]="['/detail', house.id]">Learn More</a></button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
+</section>
+
+
+
